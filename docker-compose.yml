@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=careeriq
+      - POSTGRES_PASSWORD=careeriq
+      - POSTGRES_DB=careeriq
+    ports:
+      - "5432:5432"
+    volumes:
+      - careeriq_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U careeriq -d careeriq"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  careeriq-ml:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
+      - MODEL_DIR=/app/models
+      - DATABASE_URL=postgresql+psycopg://careeriq:careeriq@postgres:5432/careeriq
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-insecure-dev-secret-key-change-me}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./models:/app/models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  careeriq_postgres_data:

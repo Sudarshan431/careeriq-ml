@@ -1,0 +1,14 @@
+{
+  "Programming Languages": ["Java", "Python", "JavaScript", "TypeScript", "C", "C++", "C#", "Go", "Rust", "Kotlin", "Scala", "Ruby", "PHP", "Swift", "R"],
+  "Backend": ["Spring", "Spring Boot", "Spring Security", "Spring Data", "Hibernate", "Node.js", "Express", "Django", "FastAPI", "Flask", "ASP.NET", "Laravel", "NestJS"],
+  "Frontend": ["React", "Angular", "Vue", "HTML", "CSS", "Sass", "Tailwind CSS", "Next.js", "Redux", "jQuery", "Svelte"],
+  "Databases": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Elasticsearch", "SQLite", "Oracle", "Cassandra", "DynamoDB", "MariaDB", "SQL", "NoSQL"],
+  "Cloud": ["AWS", "Azure", "GCP", "EC2", "S3", "RDS", "Lambda", "CloudFormation", "Azure Functions", "Google Cloud Storage"],
+  "DevOps": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "GitLab CI", "Terraform", "Ansible", "CI/CD", "Helm", "Prometheus", "Grafana"],
+  "Messaging": ["Kafka", "RabbitMQ", "ActiveMQ", "SQS", "SNS", "ZeroMQ"],
+  "ML": ["scikit-learn", "TensorFlow", "PyTorch", "Pandas", "NumPy", "NLP", "Computer Vision", "Transformers", "Keras", "XGBoost", "LightGBM", "OpenCV", "Sentence Transformers", "spaCy", "NLTK"],
+  "System Design": ["Microservices", "REST", "GraphQL", "Distributed Systems", "Event Driven Architecture", "gRPC", "API Gateway", "Load Balancing", "Message Queues"],
+  "Version Control & Tools": ["Git", "GitHub", "GitLab", "Bitbucket", "Maven", "Gradle", "npm", "Webpack", "JIRA"],
+  "Testing": ["JUnit", "Mockito", "pytest", "Selenium", "Cypress", "Jest", "TestNG"],
+  "Mobile": ["Android", "iOS", "React Native", "Flutter"]
+}

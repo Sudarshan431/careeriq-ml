@@ -1,0 +1,17 @@
+{
+  "Java": {"children": ["Spring", "Hibernate", "Maven", "Gradle"], "related": ["Kotlin", "Scala"]},
+  "Spring": {"parent": "Java", "children": ["Spring Boot", "Spring Security", "Spring Data"]},
+  "Spring Boot": {"parent": "Spring", "related": ["Hibernate", "Maven", "PostgreSQL", "Docker", "Microservices"]},
+  "Cloud": {"children": ["AWS", "Azure", "GCP"]},
+  "AWS": {"parent": "Cloud", "children": ["EC2", "S3", "RDS", "Lambda"]},
+  "Azure": {"parent": "Cloud"},
+  "GCP": {"parent": "Cloud"},
+  "Python": {"children": ["Django", "FastAPI", "Flask", "Pandas", "NumPy", "scikit-learn", "PyTorch", "TensorFlow"]},
+  "ML": {"children": ["scikit-learn", "TensorFlow", "PyTorch", "Pandas", "NumPy", "NLP", "Computer Vision", "Transformers"]},
+  "React": {"parent": "Frontend", "related": ["Redux", "Next.js", "JavaScript", "TypeScript"]},
+  "DevOps": {"children": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Terraform", "CI/CD"]},
+  "Docker": {"related": ["Kubernetes", "CI/CD"]},
+  "Kubernetes": {"parent": "DevOps", "related": ["Docker", "Helm"]},
+  "Messaging": {"children": ["Kafka", "RabbitMQ", "SQS", "SNS"]},
+  "Databases": {"children": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Elasticsearch"]}
+}

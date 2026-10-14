@@ -1,0 +1,72 @@
+{
+  "model_name": "logistic_regression",
+  "version": "20260815165926",
+  "training_date": "2026-08-15T16:59:26.194144+00:00",
+  "dataset_version": "synthetic-v1",
+  "feature_version": "v1",
+  "metrics": {
+    "validation": {
+      "accuracy": 0.9333,
+      "precision": 0.9032,
+      "recall": 0.8235,
+      "f1": 0.8615,
+      "confusion_matrix": [
+        [
+          98,
+          3
+        ],
+        [
+          6,
+          28
+        ]
+      ]
+    },
+    "test": {
+      "accuracy": 0.9778,
+      "precision": 1.0,
+      "recall": 0.9091,
+      "f1": 0.9524,
+      "confusion_matrix": [
+        [
+          102,
+          0
+        ],
+        [
+          3,
+          30
+        ]
+      ],
+      "roc_auc": 0.9929
+    },
+    "baseline_comparison": {
+      "accuracy": 0.9852,
+      "precision": 0.9697,
+      "recall": 0.9697,
+      "f1": 0.9697,
+      "confusion_matrix": [
+        [
+          101,
+          1
+        ],
+        [
+          1,
+          32
+        ]
+      ]
+    }
+  },
+  "configuration": {
+    "features": [
+      "skill_overlap_ratio",
+      "experience_compatibility",
+      "same_cluster",
+      "candidate_experience_years",
+      "job_experience_required",
+      "n_candidate_skills",
+      "n_required_skills"
+    ],
+    "seed": 42
+  },
+  "python_version": "3.12.3",
+  "platform": "Linux-6.18.5-fc-v20-x86_64-with-glibc2.39"
+}
